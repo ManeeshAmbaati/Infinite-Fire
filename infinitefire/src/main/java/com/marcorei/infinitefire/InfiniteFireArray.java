@@ -168,7 +168,8 @@ public class InfiniteFireArray<T> {
         catch(DatabaseException exception) {
             value = null;
         }
-        return new InfiniteFireSnapshot<>(dataSnapshot.getKey(), value);
+
+        return new InfiniteFireSnapshot<>(dataSnapshot.getKey(), value, dataSnapshot.getRef());
     }
 
     /**
